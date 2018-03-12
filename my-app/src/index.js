@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Layout from './components/Layout'
+import NameForm from './components/NameForm'
 
 
 
 const app = document.getElementById('root');
-ReactDom.render(<Layout/>, app);
+ReactDom.render(<NameForm />, app);
+
+  
+// const app= document.getElementById('root');
+//  ReactDOM.render(<NameForm />, app);
+  
