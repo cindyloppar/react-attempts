@@ -6,9 +6,7 @@ export default class NameForm extends React.Component {
       this.state = {Name: ''};
       this.state = {Surname: ''};
       this.state = {Email: ''};
-
       
-  
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
