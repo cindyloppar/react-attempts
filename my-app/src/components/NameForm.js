@@ -3,7 +3,10 @@ import React from 'react'
 export default class NameForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {Name: ''};
+      this.state = {Surname: ''};
+      this.state = {Email: ''};
+
       
   
       this.handleChange = this.handleChange.bind(this);
@@ -11,14 +14,17 @@ export default class NameForm extends React.Component {
     }
   
     handleChange(event) {
-      this.setState({value: event.target.value});
+      this.setState({Name: event.target.value});
+      this.setState({Surname:event.target.value})
+      this.setState({Email:event.target.value})
       
     }
    
   
     handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
+      alert('Details submitted: ' + this.state.Name);
       event.preventDefault();
+
     }
 
   
