@@ -1,11 +1,14 @@
-import React from 'react'
+
+import React from 'react';
+
 
 export default class NameForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {Name: ''};
-      this.state = {Surname: ''};
-      this.state = {Email: ''};
+      this.state = {Name: '',
+      Surname:'',
+      Email:''};
+    
       
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,30 +21,31 @@ export default class NameForm extends React.Component {
       
     }
    
-  
     handleSubmit(event) {
       alert('Details submitted: ' + this.state.Name);
-      event.preventDefault();
+      // event.preventDefault();
 
     }
-
-  
+   
     render() {
       return (
+        
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <h1 center> Get to honor me</h1>
+        <h2> Q&A</h2>
+          <label >
+            Name and Surname:
+            <input  placeholder="" type="text" value={this.state.value} onChange={this.handleChange} />
             
             </label><br />
 
             <label>
-            Surname:
-            <input type="text" value={this.state.value} onChange={this.handleChange} /><br />
+            Where were you born:
+            <input placeholder="" type="text" value={this.state.value} onChange={this.handleChange} /><br />
             
             </label>
             <label>
-            Email:
+            How Tall Are You:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
             
             </label>

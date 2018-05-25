@@ -1,26 +1,19 @@
 import React from 'react';
-
-import Footer from './Footer';
 import Header from './Header';
 
 export default class Layout extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-        title: "Welcome",
-    };
-}
-    render(){    
-        const title = "Welcome Cindy!"; 
 
+    handleChange(e){
+        const input = e.target.value;
+        this.props.changeDescription(input);
+    }
+
+    render(){     
         return (
-            <div>
-                {this.state.name}                
-                 <Header title={"Other Title"}/>
-                 <Footer />
-
-            </div>
-                 
+            <div>                     
+                 <h1> Markdown Previewer</h1>  
+                 <input value = {this.props.value} onChange = {this.handleChange.bind(this)}/>
+            </div>           
         );
     } 
 }
